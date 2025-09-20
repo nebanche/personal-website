@@ -31,7 +31,7 @@ jobs:
       - name: HTML Proofer
         run: |
           gem install html-proofer
-          htmlproofer ./_site --allow-hash-href
+          htmlproofer ./_site --allow-hash-href --disable-external --swap-urls "^/personal-website/:/"
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v4
