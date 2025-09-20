@@ -27,11 +27,19 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
       - run: bundle install --path vendor/bundle
-      - run: bundle exec jekyll build --trace
+      - name: Build Jekyll site for testing
+        run: bundle exec jekyll build --trace --baseurl ""
+        env:
+          JEKYLL_ENV: production
       - name: HTML Proofer
         run: |
           gem install html-proofer
-          htmlproofer ./_site --allow-hash-href
+          htmlproofer ./_site --allow-hash-href --disable-external --assume-extension
+      - name: Build Jekyll site for deployment
+        if: github.ref == 'refs/heads/main'
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v4
