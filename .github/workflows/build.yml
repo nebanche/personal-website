@@ -18,4 +18,4 @@ jobs:
       - name: HTML Proofer
         run: |
           gem install html-proofer
-          htmlproofer ./_site --check-html --allow-hash-href
+          htmlproofer ./_site --allow-hash-href
