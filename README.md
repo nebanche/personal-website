@@ -13,7 +13,7 @@ Then visit http://127.0.0.1:4000
 
 ## Deploy
 
-- **GitHub Pages**: Enable Pages for this repo (build from `GitHub Actions` or `/docs` if you prefer).  
+- **GitHub Pages**: This repo includes a GitHub Actions workflow for automatic deployment. See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for setup instructions.
 - **Cloudflare**: Point your domain to Cloudflare and proxy (orange cloud). Turn on Brotli, HTTP/2+3, Auto‑Minify (HTML/CSS/JS). Add caching rules: long cache for `/assets/*`, bypass for HTML.
 
 ## Performance budget
