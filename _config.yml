@@ -1,7 +1,7 @@
 title: Ultra Lean
 description: "An ultra‑lean, Harry‑style Jekyll starter"
-url: "" # set your production URL (no trailing slash)
-baseurl: "" # e.g. /blog if served from a subpath
+url: "https://nebanche.github.io" # set your production URL (no trailing slash)
+baseurl: "/personal-website" # e.g. /blog if served from a subpath
 timezone: America/New_York
 permalink: /:categories/:title/
 markdown: kramdown
