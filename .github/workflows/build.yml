@@ -1,0 +1,21 @@
+name: build
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: bundle install --path vendor/bundle
+      - run: bundle exec jekyll build --trace
+      - name: HTML Proofer
+        run: |
+          gem install html-proofer
+          htmlproofer ./_site --check-html --allow-hash-href

@@ -1,0 +1,33 @@
+title: Ultra Lean
+description: "An ultra‑lean, Harry‑style Jekyll starter"
+url: "" # set your production URL (no trailing slash)
+baseurl: "" # e.g. /blog if served from a subpath
+timezone: America/New_York
+permalink: /:categories/:title/
+markdown: kramdown
+sass:
+  style: compressed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - .cache
+  - .gitignore
+  - .github
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title/
+defaults:
+  - scope: {path: ""}
+    values:
+      layout: page
+      image: /assets/img/og-default.jpg

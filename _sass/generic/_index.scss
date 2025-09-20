@@ -1,0 +1,4 @@
+*,*::before,*::after{box-sizing:border-box}
+html{font-family: $font-stack; text-rendering: optimizeLegibility}
+body{margin:0; line-height:1.5}
+img{max-width:100%; height:auto}

@@ -1,0 +1,7 @@
+:root{color-scheme: light dark}
+main{display:block}
+a{color:inherit}
+a:hover{text-decoration: underline}
+h1,h2,h3{line-height:1.2; margin:0 0 $scale-3}
+p{margin:0 0 $scale-3}
+code,kbd,pre{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
